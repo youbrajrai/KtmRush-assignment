@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Logo;
 use Illuminate\Http\Request;
+use App\Http\Requests\LogoFormRequest;
 use File;
 class LogoController extends Controller
 {
@@ -34,7 +35,7 @@ class LogoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LogoFormRequest $request)
     {
         $attributes = self::attributes($type='save');
         $attributes->save();

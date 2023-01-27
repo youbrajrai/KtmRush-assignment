@@ -70,10 +70,6 @@
            $('#table').DataTable();
         } );
     </script>
-    <script>
-        CKEDITOR.replace( 'content' );
-    </script>  
-    @stack('change-script')  
     
 </body>
 

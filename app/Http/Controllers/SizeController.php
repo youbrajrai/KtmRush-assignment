@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Size;
 use Illuminate\Http\Request;
+use App\Http\Requests\SizeFormRequest;
 
 class SizeController extends Controller
 {
@@ -34,7 +35,7 @@ class SizeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SizeFormRequest $request)
     {
 		$attributes = self::attributes($type = 'save');
 		$attributes->save();

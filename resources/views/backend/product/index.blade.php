@@ -4,7 +4,7 @@
   <h1>Product</h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+      <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Home</a></li>
       <li class="breadcrumb-item">Dashboard</li>
       <li class="breadcrumb-item active">Product</li>
     </ol>
@@ -29,13 +29,8 @@
                                 <th>Parent Category</th>
                                 <th>Quantity</th>
                                 <th>Original Price</th>
-                                <th>Selling Price</th>
-                                <th>Colors</th>
-                                <th>Size</th>                                
+                                <th>Selling Price</th>                               
                                 <th>Description</th>
-                                <th>Meta Title</th>
-                                <th>Meta Keywords</th>
-                                <th>Meta Description</th>
                                 <th>Status</th>
                                 <th>Trending</th>
                                 <th width="20%">Action</th>
@@ -45,32 +40,17 @@
                             @forelse($products as $val)
                             <tr>
                                 <td>{{$val->id}}</td>
-                                <td> <img src="{{asset('assets/img/product/'.$val->image)}}" style="object-fit:fill;width:50px;heigth:50px"></td>
+                                <td> <img src="{{asset('assets/img/products/'.$val->image)}}" style="object-fit:fill;width:50px;heigth:50px"></td>
                                 <td>{{$val->title}}</td>
                                 <td>
-                                @if($val->category_id)
-                                    {{$val->category->title}}
-                                    @endif
+                                {{$val->category->title}}
                                 </td>
                                 <td>                        
                                     {{$val->quantity}}
                                 </td>                                
                                 <td>{{$val->original_price}}</td>
-                                <td>{{$val->selling_price}}</td>
-                                <td>
-                                @if($val->colors_id)
-                                    {{$val->colors->title}}
-                                    @endif
-                                </td> 
-                                <td>
-                                @if($val->size_id)
-                                    {{$val->size->title}}
-                                @endif
-                                </td>                                                                                               
+                                <td>{{$val->selling_price}}</td>                                                                                              
                                 <td>{{$val->description}}</td>
-                                <td>{{$val->meta_title}}</td>
-                                <td>{{$val->meta_keywords}}</td>
-                                <td>{{$val->meta_description}}</td>
                                 <td>{{$val->status}}</td>
                                 <td>{{$val->trending}}</td>
                                 <td width="20%" style="display:flex;gap:10px">

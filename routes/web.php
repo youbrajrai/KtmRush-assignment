@@ -8,6 +8,7 @@ use App\Http\Controllers\SizeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/user',UserController::class);
     Route::resource('/logo',LogoController::class);
     Route::resource('/banner',BannerController::class);
+    Route::resource('/product',ProductController::class);
 });
 

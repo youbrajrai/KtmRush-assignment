@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Color;
 use Illuminate\Http\Request;
+use App\Http\Requests\ColorFormRequest;
 
 class ColorController extends Controller
 {
@@ -34,7 +35,7 @@ class ColorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ColorFormRequest $request)
     {
 		$attributes = self::attributes($type = 'save');
 		$attributes->save();

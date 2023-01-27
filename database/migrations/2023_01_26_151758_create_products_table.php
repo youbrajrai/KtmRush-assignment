@@ -17,19 +17,16 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');
-            $table->bigInteger('size_id')->unsigned();
-            $table->bigInteger('color_id')->unsigned();                       
+            $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');                       
+            $table->string('color')->nullable();
+            $table->string('size')->nullable();
 			$table->string('image');
             $table->string('quantity');
             $table->string('original_price');
             $table->string('selling_price');
             $table->longText('description');
-            $table->tinyInteger('status');
-            $table->tinyInteger('trending');
-            $table->mediumText('meta_title');
-            $table->mediumText('meta_keywords');
-            $table->mediumText('meta_description');
+            $table->tinyInteger('status')->default('0');
+            $table->tinyInteger('trending')->default('0');
             $table->timestamps();
         });
     }
