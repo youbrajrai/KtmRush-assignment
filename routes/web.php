@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ColorController;
+use App\Http\Controllers\SizeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\BannerController;
@@ -27,6 +29,8 @@ Route::post('/register',[AuthController::class,'register'])->name('register');
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::middleware(['auth'])->group(function(){
     Route::resource('/category',CategoryController::class);
+    Route::resource('/size',SizeController::class);
+    Route::resource('/color',ColorController::class);
     Route::resource('/user',UserController::class);
     Route::resource('/logo',LogoController::class);
     Route::resource('/banner',BannerController::class);

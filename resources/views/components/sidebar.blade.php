@@ -23,7 +23,18 @@
           <span>Categories</span>
         </a>
       </li><!-- End Categories Page Nav -->
-     
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('size.index')}}">
+          <i class="bi bi-bookmark"></i>
+          <span>Sizes</span>
+        </a>
+      </li><!-- End Categories Page Nav -->      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('color.index')}}">
+          <i class="bi bi-bookmark"></i>
+          <span>Colors</span>
+        </a>
+      </li><!-- End Categories Page Nav -->     
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="">
