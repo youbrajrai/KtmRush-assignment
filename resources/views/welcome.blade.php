@@ -1,130 +1,419 @@
-<html lang="en">
-
-<head>
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="og:title" content="">
-    <meta name="og:description" content="">
-    <meta name="og:image" content="">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="">
-    <!-- Mobile Metas -->
-    <meta name="description" content="">
-    <meta name="og:title" content="">
-    <meta name="og:description" content="">
-    <meta name="og:image" content="">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, user-scalable=no">
-    <!-- Web Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <style>
-        :root {
-            --primary-color: #1b489b;
-            --secondary-color: #8f2a2a;
-            --title-color: #0a1031;
-            --body-color: #140901;
-
-            /* Do not change these */
-            --white: #FEFEFE;
-            --gray: #E7E7E7;
-            --lightBg: #fafafa;
-            /* Do not change these */
-
-            --title-font: 'Hanken Grotesk', sans-serif;
-            --body-font: 'Hanken Grotesk', sans-serif;
-
-            --blue: #1b489b;
-            --blueDark: #133168;
-            --red: #8f2a2a;
-            --white: #FEFEFE;
-            --black: #140901;
-            --gray: #E7E7E7;
-            --lightBg: #fafafa;
-            --font: 'Hanken Grotesk', sans-serif;
-        }
-    </style>
-    <link rel="stylesheet" href="{{asset('css/reboot.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/spacing.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
-</head>
-
-<body class="layout-2">
+@extends('frontend.layout')
+@section('content')
     <!-- navbar -->
-        @include('frontend.navbar')
+    <div id="topbar" class="pt8 pb8">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="logo">
+                        @forelse($logos as $val)
+                            @if($val->is_current === 1)
+                                <img src="{{asset('assets/img/logo/'.$val->image)}}" style="object-fit:fill;width:300px;heigth:90px" alt="">
+                            @endif
+                        @empty
+                        <img src="https://via.placeholder.com/300x90" alt="">
+                        @endforelse
+                    </div>
+                </div>
+                <div class="col-9">
+                    <ul class="topbarinfo">
+                        <li>
+                            <div class="" id="desktop-cart">
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>My Cart</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#logIn">
+                                <i class="fa fa-user"></i>
+                                <span>Log In</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- navbar -->
+    
     <!-- banner -->
-        @include('frontend.banner')
+    <div class="banner position-relative">
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{{asset('./images/banners/slider-1.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('./images/banners/slider-2.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{{asset('./images/banners/slider-3.jpg')}}" alt="" class="img-fluid">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
     <!-- banner -->
     <main>
         <!-- Products -->
-        @include('frontend.product')
+        <div class="pt40">
+            <div class="container">
+                <h2 class="text-center mb-4"><strong>Electronics</strong></h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-13-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Travel Bag
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 2400</del>
+                                        <ins>Nrs. 1850</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-1-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Men's Stylish Sunglasses
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 1250</del>
+                                        <ins>Nrs. 990</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-11-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Red Skirt Belt
+                                    </p>
+                                    <p class="price">
+                                        <ins>Nrs. 250</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-3-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Men's Leather Purse
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 960</del>
+                                        <ins>Nrs. 850</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-16-front.jpg')}}" class=" img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Luxurious Perfume
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 1350</del>
+                                        <ins>Nrs. 1250</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/16-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Black Dress
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 5355</del>
+                                        <ins>Nrs. 4755</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-6-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Zergz Smart Watch 2
+                                    </p>
+                                    <p class="price">
+                                        <ins>Nrs. 9720</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/13-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Men's Stylish Blazer
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 4500</del>
+                                        <ins>Nrs. 3750</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt40">
+            <div class="container">
+                <h2 class="text-center mb-4"><strong>Electronics</strong> <small> - Mobile Phones</small></h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-13-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Travel Bag
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 2400</del>
+                                        <ins>Nrs. 1850</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-1-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Men's Stylish Sunglasses
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 1250</del>
+                                        <ins>Nrs. 990</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-11-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Red Skirt Belt
+                                    </p>
+                                    <p class="price">
+                                        <ins>Nrs. 250</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-3-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Men's Leather Purse
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 960</del>
+                                        <ins>Nrs. 850</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-6-front.jpg')}}" class=" img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Luxurious Perfume
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 1350</del>
+                                        <ins>Nrs. 1250</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="./images/products/theme1/16-front.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Black Dress
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 5355</del>
+                                        <ins>Nrs. 4755</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/acc-6-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Zergz Smart Watch 2
+                                    </p>
+                                    <p class="price">
+                                        <ins>Nrs. 9720</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-wrapper-main theme-2">
+                                <div class="product-image">
+                                    <img src="{{asset('./images/products/theme1/13-front.jpg')}}" class="img-fluid" alt="">
+                                </div>
+                                <div class="product-details">
+                                    <p class="product-title">
+                                        Men's Stylish Blazer
+                                    </p>
+                                    <p class="price">
+                                        <del>Nrs. 4500</del>
+                                        <ins>Nrs. 3750</ins>
+                                    </p>
+                                    <p>
+                                        <a href="" class="main-button " data-bs-toggle="modal"
+                                            data-bs-target="#addToCart">Add To Cart <i class="fa fa-plus"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- Products -->
         <!-- map -->
-        @include('frontend.map')
+        <div class="map-wrapper">
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31397712412!2d85.3261328!3d27.708960349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1672746796918!5m2!1sen!2snp"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
         <!-- map -->
 
 
     </main>
-    <!-- cart -->
-        @include('frontend.cart')
-    <!-- cart -->
-    <!-- checkout -->
-        @include('frontend.checkout')
-    <!-- checkout -->
-
-    <!-- Product Detail Modal -->
-        @include('frontend.productdetail')
-    <!-- Product Detail Modal -->
-
-    <!-- login Modal -->
-        @include('frontend.login')
-    <!-- login Modal -->
-
-    <!-- Register Modal -->
-        @include('frontend.register')
-    <!-- Register Modal -->
-
-
-
-    <!-- mobile footer -->
-    @include('frontend.mobile-footer')
-    <!-- mobile footer -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
-        integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{asset('js/jquery-equal-height.min.js')}}"></script>
-    <script src="{{asset('js/functions.js')}}"></script>
-    <script>
-        $(window).on('load', function (event) {
-            $('.theme-2').jQueryEqualHeight('.product-details .product-title');
-            $('.theme-2').jQueryEqualHeight('.product-details');
-        });
-
-    </script>
-    @stack('login-success')
-    @stack('register-success')
-</body>
-
-</html>
+@endsection
