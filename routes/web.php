@@ -10,6 +10,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +29,8 @@ Route::get('/',[HomeController::class,'index'])->name('welcome');
 Route::get('/dashboard',[AuthController::class,'dashboard'])->name('dashboard');
 Route::post('/login',[AuthController::class,'login'])->name('login');
 Route::post('/register',[AuthController::class,'register'])->name('register');
+Route::resource('/cart',CartController::class);
+Route::resource('/checkout',CheckoutController::class);
 Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 Route::middleware(['auth'])->group(function(){
     Route::resource('/category',CategoryController::class);
@@ -35,5 +40,7 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/logo',LogoController::class);
     Route::resource('/banner',BannerController::class);
     Route::resource('/product',ProductController::class);
-});
+    Route::resource('/order',OrderController::class);
 
+
+});

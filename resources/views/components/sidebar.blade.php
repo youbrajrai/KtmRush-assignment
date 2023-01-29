@@ -25,13 +25,13 @@
       </li><!-- End Categories Page Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('size.index')}}">
-          <i class="bi bi-bookmark"></i>
+          <i class="bi bi-basket3"></i>
           <span>Sizes</span>
         </a>
       </li><!-- End Size Page Nav -->      
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('color.index')}}">
-          <i class="bi bi-bookmark"></i>
+          <i class="bi bi-brush"></i>
           <span>Colors</span>
         </a>
       </li><!-- End Color Page Nav -->     
@@ -57,6 +57,19 @@
           <span>Banner</span>
         </a>
       </li><!-- End Banner Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('order.index')}}">
+          <i class="bi bi-cart4"></i>
+          <span>Order</span>
+        </a>
+      </li><!-- End Order Page Nav --> 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('orderItem.index')}}">
+          <i class="bi bi-cash-stack"></i>
+          <span>Order Item</span>
+        </a>
+      </li><!-- End Order Item Page Nav -->       
+                 
 
     </ul>
 

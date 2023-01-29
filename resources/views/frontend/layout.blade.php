@@ -68,209 +68,6 @@
 
 <body class="layout-2">
     @yield('content')
-    <!-- cart -->
-    <div id="cart">
-        <div class="container-fluid">
-            <div class="cart-title">
-                <h4>My Cart</h4>
-                <a href="javascript:void();">
-                    <i class="fa fa-times"></i>
-                </a>
-                <hr>
-            </div>
-        </div>
-        <div class="cart-wrapper">
-            <div class="cart-item-wrapper">
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="cart-item">
-                    <div class="cart-image-wrapper">
-                        <a href="javascript:void(0);">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <img src="{{asset('./images/products/home-9/product-1.jpg')}}" alt="">
-                    </div>
-                    <div class="cart-details">
-                        <p class="cart-title">
-                            Orange T-shirt
-                        </p>
-                        <p class="cart-price">
-                            Nrs. 900
-                        </p>
-                        <div class="cart-extra">
-                            <p>Size: <span>XS</span></p>
-                            <p>Color: <span class="cart-color" style="background-color:red;"></span></p>
-                        </div>
-                        <div class="increase-decrease">
-                            <button type="button" class="decrease">-</button>
-                            <input type="number" class="number-change text-base w-24" value="1">
-                            <button type="button" class="increase">+</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="cart-bottom">
-                <a href="#" id="check-out" class="main-button add-to-cart">Checkout <i
-                        class="fa fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- cart -->
     <!-- checkout -->
     <div id="checkout">
         <div class="checkout-wrapper">
@@ -284,27 +81,41 @@
 
                             <div class="col-sm-12">
                                 <div id="delivery-form">
-                                    <form action="">
+                                    @auth
+                                    <form action="{{route('checkout.store')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="sub_total" value="{{ auth()->user()->cartSubTotal }}">
                                         <div class="input-groups">
                                             <label for="" class="d-block">Enter Reciever's name</label>
-                                            <input type="text" placeholder="Eg: John  Doe" class="form-control">
+                                            <input type="text" placeholder="Eg: John  Doe" name="name" class="form-control">
                                         </div>
                                         <div class="input-groups">
-                                            <label for="" class="d-block">Enter Reciever's name</label>
-                                            <input type="text" placeholder="Eg: John  Doe" class="form-control">
+                                            <label for="" class="d-block">Enter Reciever's Address</label>
+                                            <input type="text" placeholder="Eg: New Pashupati" name="address" class="form-control">
                                         </div>
                                         <div class="input-groups">
                                             <label for="" class="d-block">Enter Reciever's Phone</label>
-                                            <input type="text" placeholder="Eg: 9843000000" class="form-control">
+                                            <input type="text" placeholder="Eg: 9843000000" name="phone" class="form-control">
                                         </div>
                                         <div class="input-groups">
                                             <label for="" class="d-block">Additional Notes</label>
-                                            <textarea name="" class="form-control" id="" rows="4"></textarea>
-                                        </div>
+                                            <textarea name="notes" class="form-control" id="" rows="4"></textarea>
+                                        </div>                                       
                                         <br>
-                                        <button href="" class="main-button ">Checkout <i
+                                        <button type="submit" class="main-button ">Checkout <i
                                                 class="fa fa-arrow-right"></i></button>
                                     </form>
+                                    @else
+                                    <div class="row">
+                                        <div class="col-12 my-4">
+                                            <h4>Please login to proceed</h4>
+                                            <a href="" data-bs-toggle="modal" data-bs-target="#logIn">
+                                                <i class="fa fa-user"></i>
+                                                <span>Log In</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endauth                                    
                                 </div>
                             </div>
                         </div>
@@ -315,163 +126,7 @@
     </div>
     <!-- checkout -->
 
-    <!-- Product Detail Modal -->
-    <div class="modal fade" id="addToCart" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="addToCartLabel">Nike Air Jordans</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row align-items-start">
-                            <div class="col-sm-6 for-m">
-                                <div class="main-product-image">
-                                    <img src="{{asset('./images/products/img-big.jpg')}}" class="img-fluid" alt="">
-                                </div>
-                                <div class="swiper-container overflow-hidden swiper2">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-1.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-2.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-3.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-4.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-5.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-6.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-7.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="swiper-slide" data-img="./images/products/">
-                                            <img src="{{asset('./images/products/home-9/product-8.jpg')}}" class="img-fluid" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <h3 class="product-main-title">
-                                    Nike Air Jordans
-                                </h3>
-                                <p class="main-price">
-                                    <del>NRs. 45000</del> <ins>Nrs. 39999</ins>
-                                </p>
-                                <p class="main-descriptions">
-                                    Originally released in November 1993, the Air Jordan IX model was the first
-                                    model released after
-                                    Michael Jordan's retirement. Jordan never played an NBA season wearing these
-                                    shoes. This model
-                                    was inspired by baseball cleats that Jordan wore when playing minor-league
-                                    baseball.
 
-                                    Like the VII and VIII models, the Air Jordan IX featured an inner sock sleeve
-                                    and nubuck
-                                    accents. The sole featured different symbols and languages of different
-                                    countries. The Air
-                                    Jordan IX has been the shoe chosen to adorn Jordan's feet for his statue outside
-                                    of the United
-                                    Center in Chicago.
-                                </p>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="variant-wrapper">
-                                            <p class="variant-title">
-                                                Select Size
-                                            </p>
-                                            <div class="radio-group">
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="x-small"
-                                                        name="size" value="x-small">
-                                                    <label class="variant-label square-boxes" for="x-small">XS</label>
-                                                </div>
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="small"
-                                                        name="size" value="small">
-                                                    <label class="variant-label square-boxes" for="small">S</label>
-                                                </div>
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="medium"
-                                                        name="size" value="medium">
-                                                    <label class="variant-label square-boxes" for="medium">M</label>
-                                                </div>
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="large"
-                                                        name="size" value="large">
-                                                    <label class="variant-label square-boxes" for="large">L</label>
-                                                </div>
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="extralarge"
-                                                        name="size" value="extralarge">
-                                                    <label class="variant-label square-boxes"
-                                                        for="extralarge">XL</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="variant-wrapper">
-                                            <p class="variant-title">
-                                                Select Color
-                                            </p>
-                                            <div class="radio-group">
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="color1"
-                                                        name="color" value="color1">
-                                                    <label class="variant-label color-boxes" for="color1"
-                                                        style="background-color:red">
-                                                        <i class="fas fa-check text-xs text-white"></i>
-                                                    </label>
-                                                </div>
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="color2"
-                                                        name="color" value="color2">
-                                                    <label class="variant-label color-boxes" for="color2"
-                                                        style="background-color:midnightblue">
-                                                        <i class="fas fa-check text-xs text-white"></i>
-                                                    </label>
-                                                </div>
-                                                <div>
-                                                    <input class="variant-radio" hidden="" type="radio" id="color3"
-                                                        name="color" value="color3">
-                                                    <label class="variant-label color-boxes" for="color3"
-                                                        style="background-color:green">
-                                                        <i class="fas fa-check text-xs text-white"></i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="main-product-add">
-                                    <div class="increase-decrease">
-                                        <button type="button" class="decrease">-</button>
-                                        <input type="number" class="number-change text-base w-24" value="1">
-                                        <button type="button" class="increase">+</button>
-                                    </div>
-                                    <button type="button" class="main-button">Add To Cart <i
-                                            class="fa fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Product Detail Modal -->
 
     <!-- login Modal -->
     <div class="modal fade" id="logIn" tabindex="-1" aria-labelledby="logInLabel" aria-hidden="true">
@@ -582,6 +237,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{asset('js/jquery-equal-height.min.js')}}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{asset('js/functions.js')}}"></script>
     <script>
         $(window).on('load', function (event) {
@@ -594,7 +250,7 @@
         toastr.options = 
         {
             "closeButton" : true,
-            "progressBar" : true    
+            "progressBar" : true,  
         }
         @if ($errors->has('email'))
             toastr.error("{{ $errors->first('email') }}")
@@ -614,7 +270,7 @@
         toastr.options = 
         {
             "closeButton" : true,
-            "progressBar" : true    
+            "progressBar" : true,   
         }
         @if ($errors->has('email'))
             toastr.error("{{ $errors->first('email') }}")
@@ -629,6 +285,30 @@
             toastr.success("{{session('success')}}")
         @endif
     </script>
+    <script>
+        toastr.options = 
+        {
+            "closeButton" : true,
+            "progressBar" : true,   
+        }
+        @if ($errors->has('name'))
+            toastr.error("{{ $errors->first('name') }}")
+        @endif
+        @if ($errors->has('phone'))
+            toastr.error("{{ $errors->first('phone') }}")
+        @endif 
+        @if ($errors->has('address'))
+            toastr.error("{{ $errors->first('address') }}")
+        @endif          
+        @if(Session::has('success'))
+            toastr.success("{{session('success')}}")
+        @endif
+        @if(Session::has('error'))
+            toastr.error("{{session('error')}}")
+        @endif        
+    </script>
+    @stack('frontend-script') 
+    
 </body>
 
 </html>
